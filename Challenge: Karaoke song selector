@@ -37,5 +37,5 @@ released > 1990;
 
 Select title from songs where
 mood = "epic" and
-released < 1990 and
+released > 1990 and
 duration < 240;
