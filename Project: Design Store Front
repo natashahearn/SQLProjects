@@ -1,0 +1,30 @@
+/*Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want
+ store to specialize in. You should have a table for all the items in your store, and at least 5 columns 
+ for the kind of data you think you'd need to store. You should sell at least 15 items, and use select 
+ statements to order your items by price and show at least one statistic about the items.*/
+ 
+create table store_front (id text primary key, name TEXT, aisle INTEGER, price INTEGER, quantity INTEGER, color TEXT);
+insert into store_front values (1, "Chips", 1, 2.99, 30, "multi");
+insert into store_front values (2, "Coke", 2, 3.95, 20, "red");
+insert into store_front values (3, "Girl Clothes", 5, 15.97, 10, "pink");
+insert into store_front values (4, "Boy Clothes", 5, 16.97, 9, "blue");
+insert into store_front values (5, "Girl Bike", 10, 25.35, 3, "yellow");
+insert into store_front values (6, "Boy Bike", 8, 23.97, 7, "green");
+insert into store_front values (7, "Banana", 3, .55, 124, "yellow");
+insert into store_front values (8, "Lighter", 4, 1.98, 58, "multi");
+insert into store_front values (9, "Live Fish", 6, 2.00, 98, "orange");
+insert into store_front values (10, "Cat Food", 7, 25.99, 30, "black");
+insert into store_front values (11, "Dog Food", 7, 25.99, 49, "yellow");
+insert into store_front values (12, "Cat Liter", 7, 12.56, 5, "grey");  
+insert into store_front values (13, "Dog Treats", 7, 4.97, 23, "red");
+insert into store_front values (14, "Toys", 9, 12.99, 145, "multi");
+insert into store_front values (15, "Electronics", 9, 249.99, 4, "black");
+
+SELECT * FROM store_front
+order by aisle asc;
+
+select id, name, price, quantity from store_front
+where price < 25.00 order by price asc;
+
+select id, color, count(*) FROM store_front 
+group by color;
